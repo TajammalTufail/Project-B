@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show and Hide Password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="inputBox">
+        <input type="password" id="password"
+        placeholder="Password">
+
+        <img src="eye-close.png" id="toggleIcon"
+    </div>
+    
+</body>
+<script> 
+let toggleIcon = document.getElementById('toggleIcon')
+let password = document.getElementById('password')
+
+toggleIcon.addEventListener('click', ()=>{
+    if (password.type == 'password'){
+        password.type = 'text'
+        toggleIcon.src = 'eye-open.png'
+    }
+    else {
+        password.type = 'password'
+        toggleIcon.src = 'eye-close.png'
+    }
+})
+</script>
+
+</html>
